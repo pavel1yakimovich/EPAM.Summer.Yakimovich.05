@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace EPAM.Summer.Yakimovich._05
 {
+    /// <summary>
+    /// Class for polynomial arithmetics
+    /// </summary>
     public class Polinom
     {
         private readonly double[] coeff;
@@ -29,7 +32,7 @@ namespace EPAM.Summer.Yakimovich._05
         {
             this.Coeff = coeff;
         }
-
+        
         public static Polinom operator +(Polinom firstPolinom, Polinom secondPolinom)
         {
             bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
@@ -47,7 +50,7 @@ namespace EPAM.Summer.Yakimovich._05
             }
             return new Polinom(coeff);
         }
-
+        
         public static Polinom operator -(Polinom firstPolinom, Polinom secondPolinom)
         {
 
@@ -81,7 +84,7 @@ namespace EPAM.Summer.Yakimovich._05
 
             return new Polinom(coeff);
         }
-
+        
         public static Polinom operator *(Polinom firstPolinom, Polinom secondPolinom)
         {
             bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
@@ -99,7 +102,7 @@ namespace EPAM.Summer.Yakimovich._05
             }
             return new Polinom(coeff);
         }
-
+        
         public static Polinom operator *(Polinom somePolinom, int number)
         {
             double[] coeff = somePolinom.Coeff;
@@ -111,7 +114,7 @@ namespace EPAM.Summer.Yakimovich._05
 
             return new Polinom(coeff);
         }
-
+        
         public static Polinom operator *(int number, Polinom somePolinom)
         {
             double[] coeff = somePolinom.Coeff;
@@ -123,7 +126,7 @@ namespace EPAM.Summer.Yakimovich._05
 
             return new Polinom(coeff);
         }
-
+        
         public static bool operator ==(Polinom firstPolinom, Polinom secondPolinom)
         {
             try
@@ -135,7 +138,7 @@ namespace EPAM.Summer.Yakimovich._05
                 return false;
             }
         }
-
+        
         public static bool operator !=(Polinom firstPolinom, Polinom secondPolinom)
         {
             try
@@ -148,6 +151,11 @@ namespace EPAM.Summer.Yakimovich._05
             }
         }
 
+        /// <summary>
+        /// checks equality of 2 polynoms
+        /// </summary>
+        /// <param name="somePolinom">polynom we want to check</param>
+        /// <returns></returns>
         public bool Equals(Polinom somePolinom)
         {
             if (Degree != somePolinom.Degree)
@@ -160,6 +168,11 @@ namespace EPAM.Summer.Yakimovich._05
             return true;
         }
 
+        /// <summary>
+        /// overrided equals
+        /// </summary>
+        /// <param name="somePolinomObj"></param>
+        /// <returns></returns>
         public override bool Equals(Object somePolinomObj)
         {
             if (somePolinomObj == null)
@@ -168,6 +181,10 @@ namespace EPAM.Summer.Yakimovich._05
             return this.Equals(somePolinom);
         }
 
+        /// <summary>
+        /// overrided toString
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
