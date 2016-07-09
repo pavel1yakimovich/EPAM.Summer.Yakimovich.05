@@ -9,9 +9,9 @@ namespace EPAM.Summer.Yakimovich._05
 {
     public class Polinom
     {
-        private double[] coeff;
+        private readonly double[] coeff;
 
-        public double[] Coeff { get; set; }
+        public double[] Coeff { get;}
 
         public int Degree
         {
