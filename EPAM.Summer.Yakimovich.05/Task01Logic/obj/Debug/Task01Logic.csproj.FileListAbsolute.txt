@@ -1,0 +1,5 @@
+E:\Trainings EPAM\Day 05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\bin\Debug\EPAM.Summer.Yakimovich.05.dll
+E:\Trainings EPAM\Day 05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\bin\Debug\EPAM.Summer.Yakimovich.05.pdb
+E:\Trainings EPAM\Day 05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\obj\Debug\Task01Logic.csprojResolveAssemblyReference.cache
+E:\Trainings EPAM\Day 05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\obj\Debug\EPAM.Summer.Yakimovich.05.dll
+E:\Trainings EPAM\Day 05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\EPAM.Summer.Yakimovich.05\obj\Debug\EPAM.Summer.Yakimovich.05.pdb
