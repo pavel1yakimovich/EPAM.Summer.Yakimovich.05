@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("EPAM.Summer.Yakimovich.05")]
+[assembly: AssemblyTitle("Task01Logic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EPAM.Summer.Yakimovich.05")]
+[assembly: AssemblyProduct("Task01Logic")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("744f569e-8d37-4893-93f4-916b63e10b68")]
+[assembly: Guid("164b552b-b1c5-4a24-9f4f-dd96aaaf7266")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

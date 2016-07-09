@@ -32,45 +32,94 @@ namespace EPAM.Summer.Yakimovich._05
 
         public static Polinom operator +(Polinom firstPolinom, Polinom secondPolinom)
         {
-            double[] coeff = (firstPolinom.Degree > secondPolinom.Degree) ? firstPolinom.Coeff : secondPolinom.Coeff;
+            bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
 
-            for (int i = 0; i < firstPolinom.Degree; i++)
+            double[] coeff = (firstBigger) ? firstPolinom.Coeff : secondPolinom.Coeff;
+            if (firstBigger)
             {
-                coeff[i] = firstPolinom.coeff[i];
+                for (int i = 0; i < coeff.Length; i++)
+                    coeff[i] += secondPolinom.Coeff[i];
             }
-
-            for (int i = 0; i < secondPolinom.Degree; i++)
-                coeff[i] += secondPolinom.Coeff[i];
-
+            else
+            {
+                for (int i = 0; i < coeff.Length; i++)
+                    coeff[i] += firstPolinom.Coeff[i];
+            }
             return new Polinom(coeff);
         }
 
         public static Polinom operator -(Polinom firstPolinom, Polinom secondPolinom)
         {
-            double[] coeff = (firstPolinom.Degree > secondPolinom.Degree) ? firstPolinom.Coeff : secondPolinom.Coeff;
 
-            for (int i = 0; i < firstPolinom.Degree; i++)
+            bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
+
+            double[] coeff;
+            if (firstBigger)
             {
-                coeff[i] = firstPolinom.coeff[i];
+                coeff = firstPolinom.Coeff;
+                for (int i = 0; i < coeff.Length; i++)
+                {
+                    coeff[i] -= secondPolinom.Coeff[i];
+                }
             }
+            else
+            {
+                coeff = new double[secondPolinom.Degree];
+                int i = 0;
 
-            for (int i = 0; i < secondPolinom.Degree; i++)
-                coeff[i] -= secondPolinom.Coeff[i];
+                for (i = 0; i < firstPolinom.Degree; i++)
+                {
+                    coeff[i] = firstPolinom.Coeff[i] - secondPolinom.Coeff[i];
+                }
+
+                for (; i < coeff.Length; i++)
+                {
+                    coeff[i] -= secondPolinom.Coeff[i];
+                }
+
+            }
 
             return new Polinom(coeff);
         }
 
         public static Polinom operator *(Polinom firstPolinom, Polinom secondPolinom)
         {
-            double[] coeff = (firstPolinom.Degree > secondPolinom.Degree) ? firstPolinom.Coeff : secondPolinom.Coeff;
+            bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
 
-            for (int i = 0; i < firstPolinom.Degree; i++)
+            double[] coeff = (firstBigger) ? firstPolinom.Coeff : secondPolinom.Coeff;
+            if (firstBigger)
             {
-                coeff[i] = firstPolinom.coeff[i];
+                for (int i = 0; i < coeff.Length; i++)
+                    coeff[i] *= secondPolinom.Coeff[i];
+            }
+            else
+            {
+                for (int i = 0; i < coeff.Length; i++)
+                    coeff[i] *= firstPolinom.Coeff[i];
+            }
+            return new Polinom(coeff);
+        }
+
+        public static Polinom operator *(Polinom somePolinom, int number)
+        {
+            double[] coeff = somePolinom.Coeff;
+
+            for (int i = 0; i < somePolinom.Degree; i++)
+            {
+                coeff[i] *= number;
             }
 
-            for (int i = 0; i < secondPolinom.Degree; i++)
-                coeff[i] *= secondPolinom.Coeff[i];
+            return new Polinom(coeff);
+        }
+
+        public static Polinom operator *(int number, Polinom somePolinom)
+        {
+            double[] coeff = somePolinom.Coeff;
+
+            for (int i = 0; i < somePolinom.Degree; i++)
+            {
+                coeff[i] *= number;
+            }
 
             return new Polinom(coeff);
         }

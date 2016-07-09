@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01Logic", "EPAM.Summer.Yakimovich.05\Task01Logic.csproj", "{744F569E-8D37-4893-93F4-916B63E10B68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01Logic", "Task01Logic\Task01Logic.csproj", "{164B552B-B1C5-4A24-9F4F-DD96AAAF7266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{744F569E-8D37-4893-93F4-916B63E10B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{744F569E-8D37-4893-93F4-916B63E10B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{744F569E-8D37-4893-93F4-916B63E10B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{744F569E-8D37-4893-93F4-916B63E10B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164B552B-B1C5-4A24-9F4F-DD96AAAF7266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164B552B-B1C5-4A24-9F4F-DD96AAAF7266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164B552B-B1C5-4A24-9F4F-DD96AAAF7266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164B552B-B1C5-4A24-9F4F-DD96AAAF7266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
