@@ -208,5 +208,22 @@ namespace EPAM.Summer.Yakimovich._05
             }
             return str.ToString();
         }
+
+        /// <summary>
+        /// Method returns value of polynom with variable
+        /// </summary>
+        /// <param name="number">variable</param>
+        /// <returns></returns>
+        public double Sum(double number)
+        {
+            double sum = 0;
+
+            for (int i = 0; i < this.Degree; i++)
+            {
+                sum += this.Coeff[i]*Math.Pow(number, i);
+            }
+
+            return sum;
+        }
     }
 }
