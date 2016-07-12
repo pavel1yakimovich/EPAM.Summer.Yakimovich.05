@@ -10,11 +10,21 @@ namespace EPAM.Summer.Yakimovich._05
     /// <summary>
     /// Class for polynomial arithmetics
     /// </summary>
-    public class Polinom
+    public class Polinom : IEquatable<Polinom>
     {
-        private readonly double[] coeff;
+        public CoeffDegree[] Coeff { get;}
 
-        public double[] Coeff { get;}
+        public struct CoeffDegree
+        {
+            public int Degree { get; set; }
+            public double Coeff { get; set; }
+
+            public CoeffDegree(int degree, double coeff)
+            {
+                Degree = degree;
+                Coeff = coeff;
+            }
+        }
 
         public int Degree
         {
@@ -30,14 +40,32 @@ namespace EPAM.Summer.Yakimovich._05
 
         public Polinom(double[] coeff)
         {
-            this.Coeff = coeff;
+            int i = coeff.Length - 1, k = 0;
+
+            for (; i >= 0; i--)
+            {
+                if (Math.Abs(coeff[i]) > eps)
+                {
+                    Coeff = new CoeffDegree[i+1];
+                    break;
+                }
+            }
+
+            for (int j = 0; j < i; j++)
+            {
+                if (Math.Abs(coeff[j]) > eps)
+                {
+                    Coeff[k] = new CoeffDegree(j, coeff[j]);
+                    k++;
+                }
+            }
         }
         
         public static Polinom operator +(Polinom firstPolinom, Polinom secondPolinom)
         {
             bool firstBigger = (firstPolinom.Degree > secondPolinom.Degree);
 
-            double[] coeff = (firstBigger) ? firstPolinom.Coeff : secondPolinom.Coeff;
+            CoeffDegree[] coeff = (firstBigger) ? firstPolinom.Coeff : secondPolinom.Coeff;
             if (firstBigger)
             {
                 for (int i = 0; i < coeff.Length; i++)
